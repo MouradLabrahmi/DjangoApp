@@ -1,0 +1,35 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="wrapper fadeInDown ">
+    <div class="col-lg-9 text-center"  style = "padding-top: 100px;">
+        <div class="box-element" id="form-wrapper">
+            <h1>User resistration</h1>
+            <div class="container">
+                <form method ="POST" action="">
+                    {% csrf_token%}
+                    <!--{{form.as_p}}-->
+                    <div class="form-group " style=" padding-left:40px; padding-right: 60px; ">
+                        <!--<input class="form-control" type="text" name="username" placeholder="username">-->
+                        {{form.username}}
+                    </div>
+                    <div class="form-group" style=" padding-left:40px; padding-right: 60px;">
+                        {{form.email}}
+                    </div>
+                    <div class="form-group" style=" padding-left:40px; padding-right: 60px;">
+                        {{form.password1}}
+                    </div>
+                    <div class="form-group" style=" padding-left:40px; padding-right: 60px;">
+                        {{form.password2}}
+                    </div>
+                    <button type="submit" class="btn btn btn-outline-success">Sign up</button>
+                    <a href="http://127.0.0.1:8000/login/" >Login</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
