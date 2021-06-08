@@ -1,3 +1,4 @@
+
 """
 Django settings for ecom_pro project.
 
